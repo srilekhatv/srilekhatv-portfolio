@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, X, FileText } from "lucide-react";
 import { ModeToggle } from "./ui/toggle-mode";
 import useActiveSection from "@/hooks/useActiveSection";
 
@@ -48,7 +48,7 @@ export default function Nav() {
 
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 flex flex-col lg:gap-4 px-6 lg:px-0">
-      {/* Mobile Header with Menu Button */}
+      {/* Mobile Header */}
       <div className="lg:hidden flex justify-between items-center mt-4">
         <h1 className="text-xl font-bold">Srilekha Tirumala Vinjamoori</h1>
         <Button
@@ -60,7 +60,7 @@ export default function Nav() {
         </Button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown */}
       {isDropdownOpen && (
         <nav className="lg:hidden mt-4">
           <ul className="flex flex-col gap-4 uppercase text-sm font-semibold text-start">
@@ -85,9 +85,11 @@ export default function Nav() {
           <h1 className="text-3xl font-bold lg:text-start lg:whitespace-nowrap">
             Srilekha Tirumala Vinjamoori
           </h1>
-          <h2 className="text-xl lg:text-start lg:whitespace-nowrap">Data Analyst | ML Enthusiast</h2>
+          <h2 className="text-xl lg:text-start lg:whitespace-nowrap">
+            Data Analyst | ML Enthusiast
+          </h2>
 
-          {/* Resume Button */}
+          {/* Resume Button (Desktop Only) */}
           <a
             href="/Srilekha_TirumalaVinjamoori_Resume.pdf"
             target="_blank"
@@ -98,12 +100,11 @@ export default function Nav() {
           </a>
         </div>
 
+        {/* Desktop Nav */}
         <nav className="mt-6">
           <ul className="flex flex-col w-max text-start gap-6 uppercase text-xs font-medium">
             {navItems.map((item) => {
-              const { linkClass, indicatorClass, textClass } = getNavItemClasses(
-                item.href
-              );
+              const { linkClass, indicatorClass, textClass } = getNavItemClasses(item.href);
               return (
                 <li key={item.name} className="group">
                   <a href={item.href} className={`py-3 ${linkClass}`}>
@@ -117,37 +118,40 @@ export default function Nav() {
         </nav>
       </div>
 
-      {/* Social Icons */}
+      {/* Socials - Shared */}
       <ul className="flex flex-row gap-4 mt-6 lg:mt-0">
         <Button variant="outline" size="icon">
-          <a
-            href="https://github.com/srilekhatv"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/srilekhatv" target="_blank" rel="noopener noreferrer">
             <Github className="h-[1.2rem] w-[1.2rem]" />
           </a>
         </Button>
         <Button variant="outline" size="icon">
-          <a
-            href="https://www.linkedin.com/in/srilekha-tirumala-vinjamoori/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com/in/srilekha-tirumala-vinjamoori/" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-[1.2rem] w-[1.2rem]" />
           </a>
         </Button>
         <Button variant="outline" size="icon">
-          <a
-            href="mailto:srilekha.tv@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:srilekha.tv@gmail.com" target="_blank" rel="noopener noreferrer">
             <Mail className="h-[1.2rem] w-[1.2rem]" />
           </a>
         </Button>
-        <ModeToggle />
-      </ul>
+
+        {/* Resume Button - Only Mobile */}
+        <div className="lg:hidden">
+          <Button variant="outline" size="icon">
+            <a
+              href="/Srilekha_TirumalaVinjamoori_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FileText className="h-[1.2rem] w-[1.2rem]" />
+            
+            </a>
+          </Button>
+        </div>
+  
+          <ModeToggle />
+        </ul>
     </header>
   );
 }

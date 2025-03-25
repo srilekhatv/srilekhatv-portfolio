@@ -31,7 +31,7 @@ const jobProjects = [
   },
 
   {
-    imagePath: "/wine.png",
+    imagePath: "/wine.PNG",
     title: "WineWise: Can Data Predict What You’ll Sip Next?",
     description:
       "Implemented regression models (Linear, Logistic, Random Forest) to predict wine sales trends. Achieved 5.2% RMSE and identified key sales drivers through correlation analysis, empowering data-driven pricing and inventory planning.",
@@ -50,7 +50,7 @@ const jobProjects = [
   },
 
   {
-    imagePath: "/add.png",
+    imagePath: "/add.PNG",
     title: "LegalLens: Real-Time Justice Insights",
     description:
       "Built an interactive Power BI dashboard using SQL Server data to monitor legal case outcomes, pending workloads, and subscription alerts. Enabled real-time tracking of advocate performance and improved operational decision-making for legal teams.",
@@ -64,7 +64,7 @@ const jobProjects = [
     link: "",
   },
   {
-    imagePath: "/udb.png",
+    imagePath: "/udb.PNG",
     title: "SmartStock: From Chaos to Clarity",
     description:
       "Designed a normalized Oracle database and built Tableau dashboards to streamline order fulfillment and inventory tracking. Improved database performance by 25% and reduced stock shortages with predictive insights into stock trends.",

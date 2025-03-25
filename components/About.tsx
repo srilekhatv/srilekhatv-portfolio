@@ -16,28 +16,24 @@ export default function About() {
       {/* Paragraphs */}
       <div className="flex flex-col gap-4 text-muted-foreground">
         <p>
-          A data storyteller, analyst, and lifelong learner passionate about transforming raw data into powerful
-          business insights. With a solid foundation in SQL, Python, Power BI, and Tableau, I bring a hybrid of
-          analytical expertise and strategic thinking to every project I work on. I am currently pursuing my MS in
-          Information Systems at the University of Texas at Arlington, where I also serve as a Graduate Teaching
-          Assistant, helping students master real-world data skills.
+        I’m a data storyteller and analyst passionate about turning raw data into actionable insights. 
+        With a strong foundation in SQL, Python, Power BI, and Tableau, I blend technical expertise 
+        with strategic thinking to solve real-world problems.
         </p>
 
         <p>
-          Beyond academics, I led cross-functional teams in the tech industry, driven marketing optimization through
-          BI dashboards, and built predictive models to solve real-world problems like job fraud detection. My
-          experience spans Wipro, Shree Venkateshwara Foams, and academia—each sharpening my ability to simplify
-          complexity and drive decision-making.
+        Currently pursuing my MS in Information Systems at UTA and working as a Graduate Teaching Assistant, 
+        I’ve also gained hands-on experience at Wipro and Shree Venkateshwara Foams—leading BI dashboards, 
+        predictive models, and cross-functional teams to drive business outcomes.
         </p>
 
         <p>
-          I am also a former student government board member, volunteer during COVID relief efforts, and a competitive
-          basketball player, which has fueled my collaborative spirit and resilience. Off the clock, I love exploring
-          user-centric design and building clean, scrollable portfolio experiences—just like this one.
+        Beyond analytics, I’ve served in student government, volunteered during COVID relief, and competed 
+        as a basketball player—experiences that shaped my leadership, collaboration, and creative mindset.
         </p>
 
         <p>
-          Whether it is through code, design, or storytelling, I am driven to make an impact—data-first, people-always.
+        Whether through code, design, or data, I’m driven to create impact—data-first, people-always.
         </p>
       </div>
     </section>
