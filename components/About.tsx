@@ -40,7 +40,7 @@ export default function About() {
 
         <div className="mt-4 inline-flex items-center gap-2 w-fit rounded-xl bg-primary/10 px-4 py-2 text-sm font-medium text-primary shadow-sm border border-primary/20 leading-none">
           <GraduationCap className="w-4 h-4 shrink-0" />
-          <span className="align-middle">M.S. in Information Systems — May 2025</span>
+          <span className="align-middle">M.S. Information Systems - May 2025</span>
         </div>
       </div>
     </section>
