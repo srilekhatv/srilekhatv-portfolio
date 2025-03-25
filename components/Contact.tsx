@@ -18,7 +18,7 @@ export default function Contact() {
 
       <div className="flex flex-wrap gap-4">
         {/* Email Button */}
-        <Button asChild variant="default">
+        <Button asChild variant="outline">
           <a href="mailto:srilekha.tv@gmail.com" target="_blank" rel="noopener noreferrer">
             <Mail className="w-4 h-4 mr-2" />
             Email Me
