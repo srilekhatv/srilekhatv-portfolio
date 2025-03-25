@@ -61,25 +61,23 @@ export default function Skills() {
     >
       {/* Section Heading */}
       <div className="mb-6">
-        <h2 className="text-3xl font-extrabold uppercase tracking-wide">
-          Skills
-        </h2>
-        <hr className="mt-2 border-slate-300 dark:border-slate-600" />
+        <h3 className="text-3xl font-bold tracking-wide border-b border-muted-foreground pb-2">
+          SKILLS
+        </h3>
       </div>
 
       {/* Skill Categories */}
       <div className="grid gap-10">
         {skills.map((group) => (
           <div key={group.category}>
-            <h3 className="text-xl font-semibold mb-4">{group.category}</h3>
-
+            <h4 className="text-xl font-semibold mb-4">{group.category}</h4>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {group.items.map((skill) => {
                 const Icon = skill.icon;
                 return (
                   <div
                     key={skill.name}
-                    className="w-32 h-32 bg-muted border border-border rounded-2xl shadow-md flex flex-col items-center justify-center text-center hover:shadow-lg transition"
+                    className="w-30 h-30 p-4 bg-muted border border-border rounded-2xl shadow-md flex flex-col items-center justify-center text-center hover:shadow-lg transition"
                   >
                     <Icon className="text-3xl mb-2 text-foreground" />
                     <span className="text-sm font-medium text-foreground">

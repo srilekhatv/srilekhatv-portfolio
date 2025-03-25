@@ -41,19 +41,17 @@ export default function Home() {
         `}</style>
       </Head>
 
-      <div className="relative mx-auto min-h-screen max-w-screen-xl px-6 py-12 sm:px-8 md:px-12 lg:px-24">
+      <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 md:px-12 lg:px-24 py-12 lg:py-0">
         <div ref={auraRef} className="mouse-aura" />
 
-        {/* Wrapper adjusts from column to row on large screens */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-4">
-          
-          {/* Sidebar Navigation (stays on top on mobile) */}
+          {/* Sidebar Navigation */}
           <div className="lg:sticky lg:top-0">
             <Nav />
           </div>
 
-          {/* Main content */}
-          <main className="flex flex-col gap-12 mt-12 lg:mt-0 lg:w-1/2">
+          {/* Main Content */}
+          <main className="flex flex-col pt-6 lg:pt-24 lg:w-1/2 gap-8">
             <About />
             <Skills />
             <Education />

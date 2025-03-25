@@ -1,6 +1,7 @@
 "use client";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
 import { ModeToggle } from "./ui/toggle-mode";
 import useActiveSection from "@/hooks/useActiveSection";
 
@@ -10,6 +11,8 @@ type NavItem = {
 };
 
 export default function Nav() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const activeSection = useActiveSection([
     "about",
     "skills",
@@ -44,46 +47,78 @@ export default function Nav() {
   };
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 flex flex-col lg:gap-4">
-      {/* Info Section */}
-      <div className="flex flex-col gap-4 lg:pr-24 mt-6 lg:mt-0">
-        <h1 className="text-3xl font-bold lg:text-start">
-          Srilekha Tirumala Vinjamoori
-        </h1>
-        <h2 className="text-xl lg:text-start">
-          Data Analyst | ML Enthusiast
-        </h2>
-
-        {/* Resume Button */}
-        <a
-          href="/Srilekha_TirumalaVinjamoori_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block w-fit mt-4 rounded-md bg-primary px-4 py-2 text-sm font-medium text-background shadow hover:bg-primary/90 transition"
+    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 flex flex-col lg:gap-4 px-6 lg:px-0">
+      {/* Mobile Header with Menu Button */}
+      <div className="lg:hidden flex justify-between items-center mt-4">
+        <h1 className="text-xl font-bold">Srilekha Tirumala Vinjamoori</h1>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
-          Resume
-        </a>
+          {isDropdownOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </Button>
       </div>
 
-      {/* Navigation */}
-      <nav className="lg:flex hidden">
-        <ul className="flex flex-col w-max text-start gap-6 uppercase text-xs font-medium">
-          {navItems.map((item) => {
-            const { linkClass, indicatorClass, textClass } = getNavItemClasses(item.href);
-            return (
-              <li key={item.name} className="group">
-                <a href={item.href} className={`py-3 ${linkClass}`}>
-                  <span className={indicatorClass}></span>
-                  <span className={textClass}>{item.name}</span>
+      {/* Mobile Dropdown Menu */}
+      {isDropdownOpen && (
+        <nav className="lg:hidden mt-4">
+          <ul className="flex flex-col gap-4 uppercase text-sm font-semibold text-start">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
+                  onClick={() => setIsDropdownOpen(false)}
+                  className="block py-1 text-foreground hover:underline"
+                >
+                  {item.name}
                 </a>
               </li>
-            );
-          })}
-        </ul>
-      </nav>
+            ))}
+          </ul>
+        </nav>
+      )}
+
+      {/* Desktop Sidebar */}
+      <div className="hidden lg:flex flex-col gap-4">
+        <div className="flex flex-col gap-4 pr-6">
+          <h1 className="text-3xl font-bold lg:text-start lg:whitespace-nowrap">
+            Srilekha Tirumala Vinjamoori
+          </h1>
+          <h2 className="text-xl lg:text-start lg:whitespace-nowrap">Data Analyst | ML Enthusiast</h2>
+
+          {/* Resume Button */}
+          <a
+            href="/Srilekha_TirumalaVinjamoori_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block w-fit mt-4 rounded-md bg-primary px-4 py-2 text-sm font-medium text-background shadow hover:bg-primary/90 transition"
+          >
+            Resume
+          </a>
+        </div>
+
+        <nav className="mt-6">
+          <ul className="flex flex-col w-max text-start gap-6 uppercase text-xs font-medium">
+            {navItems.map((item) => {
+              const { linkClass, indicatorClass, textClass } = getNavItemClasses(
+                item.href
+              );
+              return (
+                <li key={item.name} className="group">
+                  <a href={item.href} className={`py-3 ${linkClass}`}>
+                    <span className={indicatorClass}></span>
+                    <span className={textClass}>{item.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
 
       {/* Social Icons */}
-      <ul className="flex flex-row gap-6 mt-6 lg:mt-0">
+      <ul className="flex flex-row gap-4 mt-6 lg:mt-0">
         <Button variant="outline" size="icon">
           <a
             href="https://github.com/srilekhatv"
@@ -111,7 +146,6 @@ export default function Nav() {
             <Mail className="h-[1.2rem] w-[1.2rem]" />
           </a>
         </Button>
-
         <ModeToggle />
       </ul>
     </header>
