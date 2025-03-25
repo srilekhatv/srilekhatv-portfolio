@@ -23,10 +23,10 @@ To run this project locally:
 
 ```bash
 # Install dependencies
-npm install
+yarn install
 
 # Start development server
-npm run dev
+yarn dev
 
 
 
