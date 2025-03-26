@@ -91,7 +91,7 @@ export default function Nav() {
 
           {/* Resume Button (Desktop Only) */}
           <a
-            href="/Srilekha_TirumalaVinjamoori_Resume.pdf"
+            href="/STV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-2 w-fit rounded-xl bg-primary/10 px-4 py-2 text-sm font-medium text-primary shadow-sm border border-primary/20 leading-none"
@@ -140,7 +140,7 @@ export default function Nav() {
         <div className="lg:hidden">
           <Button variant="outline" size="icon">
             <a
-              href="/Srilekha_TirumalaVinjamoori_Resume.pdf"
+              href="/STV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
