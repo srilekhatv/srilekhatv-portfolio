@@ -12,6 +12,24 @@ import { MoveUpRight } from "lucide-react";
 
 const jobProjects = [
   {
+    imagePath: "/eda.png", // Add a preview screenshot named eda.png in your public folder
+    title: "Smart Data Preprocessing & EDA App",
+    description:
+      "Designed an interactive Streamlit web app for seamless data cleaning and exploratory analysis. Users can upload CSV files and instantly perform missing value handling, feature scaling, categorical encoding, and visual EDA with real-time plots. The app also supports datetime parsing, exportable datasets, and a fully custom dark theme. More features like outlier detection, duplicate handling, and AutoML integration coming soon.",
+    skills: [
+      "Streamlit",
+      "Python",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Feature Engineering",
+      "Data Cleaning",
+      "EDA Automation",
+    ],
+    link: "https://smart-data-app.streamlit.app" // Replace with your actual Streamlit app link
+  },
+
+  {
     imagePath: "/fd.png",
     title: "FraudSpotter: Can You Tell What’s Real?",
     description:
