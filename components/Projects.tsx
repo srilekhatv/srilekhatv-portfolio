@@ -12,8 +12,8 @@ import { MoveUpRight } from "lucide-react";
 
 const jobProjects = [
   {
-    imagePath: "/eda.png", // Add a preview screenshot named eda.png in your public folder
-    title: "Smart Data Preprocessing & EDA App",
+    imagePath: "/autonexus.png", // Add a preview screenshot named eda.png in your public folder
+    title: "AutoNexus: Automate. Explore. Model. Explain.",
     description:
       "Designed an interactive Streamlit web app for seamless data cleaning and exploratory analysis. Users can upload CSV files and instantly perform missing value handling, feature scaling, categorical encoding, and visual EDA with real-time plots. The app also supports datetime parsing, exportable datasets, and a fully custom dark theme. More features like outlier detection, duplicate handling, and AutoML integration coming soon.",
     skills: [
@@ -26,7 +26,7 @@ const jobProjects = [
       "Data Cleaning",
       "EDA Automation",
     ],
-    link: "https://smart-data-app.streamlit.app" // Replace with your actual Streamlit app link
+    link: "https://autonexus.streamlit.app/" // Replace with your actual Streamlit app link
   },
 
   {
