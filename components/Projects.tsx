@@ -15,7 +15,7 @@ const jobProjects = [
     imagePath: "/autonexus.png", // Add a preview screenshot named eda.png in your public folder
     title: "AutoNexus: Automate. Explore. Model. Explain.",
     description:
-      "Designed an interactive Streamlit web app for seamless data cleaning and exploratory analysis. Users can upload CSV files and instantly perform missing value handling, feature scaling, categorical encoding, and visual EDA with real-time plots. The app also supports datetime parsing, exportable datasets, and a fully custom dark theme. More features like outlier detection, duplicate handling, and AutoML integration coming soon.",
+      "AutoNexus is a powerful Streamlit web app that automates the entire data pipeline — from uploading raw CSVs to cleaning, exploring, modeling, and explaining results. Users can perform missing value handling, feature scaling, categorical encoding, and visualize EDA insights with real-time plots. It also supports exportable datasets, and model explainability with SHAP, EBM, and LIME. Built for data scientists and analysts who want faster insights without the overhead of manual coding.",
     skills: [
       "Streamlit",
       "Python",
@@ -25,6 +25,13 @@ const jobProjects = [
       "Feature Engineering",
       "Data Cleaning",
       "EDA Automation",
+      "SMOTE",
+      "Modeling",
+      "Explainability",
+      "SHAP",
+      "LIME",
+      "Explainable Boosting Machine",
+
     ],
     link: "https://autonexus.streamlit.app/" // Replace with your actual Streamlit app link
   },
@@ -33,7 +40,7 @@ const jobProjects = [
     imagePath: "/fd.png",
     title: "FraudSpotter: Can You Tell What’s Real?",
     description:
-      "Built a fraud detection model using Naive Bayes algorithms (Exact & Bernoulli) with 96.45% accuracy. Engineered key features using CountVectorizer, categorical encoding, and salary transformation. Addressed class imbalance using SMOTE, and evaluated performance with precision-recall curves and cross-validation. Visualized fraud trends via Tableau, helping identify high-risk job categories for improved screening.",
+      "Built a fraud detection model using Naive Bayes algorithms (Exact & Bernoulli) with 96.45% accuracy. Engineered key features using CountVectorizer, categorical encoding, and salary transformation. Addressed class imbalance using SMOTE, and evaluated performance with precision-recall curves and cross-validation.",
     skills: [
       "Python",
       "Feature Engineering",
@@ -43,7 +50,6 @@ const jobProjects = [
       "Imbalanced Classification",
       "Model Evaluation",
       "Cross-Validation",
-      "Tableau",
     ],
     link: "https://github.com/srilekhatv/Fraud-Detection-ML", // no link to disable this one
   },

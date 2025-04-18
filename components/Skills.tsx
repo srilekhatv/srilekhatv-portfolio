@@ -5,6 +5,7 @@ import {
   Database,
   Settings,
   Cloud,
+  GitBranch,
 } from "lucide-react";
 
 import {
@@ -17,9 +18,12 @@ import {
   SiScikitlearn,
   SiTensorflow,
   SiPytorch,
+  SiStreamlit,
+  SiGithub,
 } from "react-icons/si";
 
 import { IconType } from "react-icons";
+
 
 type SkillItem = {
   name: string;
@@ -28,29 +32,56 @@ type SkillItem = {
 
 const skills: { category: string; items: SkillItem[] }[] = [
   {
-    category: "Programming & Libraries",
+    category: "Programming Languages",
     items: [
       { name: "Python", icon: SiPython },
       { name: "R", icon: SiR },
       { name: "SQL", icon: Database },
-      { name: "pandas", icon: SiPandas },
-      { name: "NumPy", icon: SiNumpy },
-      { name: "scikit-learn", icon: SiScikitlearn },
-      { name: "TensorFlow", icon: SiTensorflow },
-      { name: "PyTorch", icon: SiPytorch },
     ],
   },
   {
-    category: "Tools & Platforms",
+    category: "Libraries",
+    items: [
+      { name: "pandas", icon: SiPandas },
+      { name: "NumPy", icon: SiNumpy },
+      { name: "scikit-learn", icon: SiScikitlearn },
+      { name: "InterpretML", icon: () => (
+        <img
+          src="/icons/interpretml.svg"
+          alt="InterpretML"
+          className="h-7 w-7 mb-2 text-foreground dark:invert"
+        />
+      ) },
+      
+    ],
+  },
+  {
+    category: "Frameworks",
+    items: [
+      { name: "TensorFlow", icon: SiTensorflow },
+      { name: "PyTorch", icon: SiPytorch },
+      { name: "Streamlit", icon: SiStreamlit },
+    ],
+  },
+  {
+    category: "Tools",
     items: [
       { name: "Power BI", icon: LucideBarChart },
       { name: "Tableau", icon: SiTableau },
       { name: "Excel", icon: Database },
       { name: "Oracle", icon: SiOracle },
       { name: "ServiceNow", icon: Settings },
+      { name: "Git", icon: GitBranch },
+      { name: "GitHub", icon: SiGithub },
+    ],
+  },
+  {
+    category: "Platforms",
+    items: [
       { name: "AWS", icon: Cloud },
     ],
   },
+
 ];
 
 export default function Skills() {
