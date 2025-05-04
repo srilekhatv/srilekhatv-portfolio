@@ -12,7 +12,7 @@ import { MoveUpRight } from "lucide-react";
 
 const jobProjects = [
   {
-    imagePath: "/autonexus.png", // Add a preview screenshot named eda.png in your public folder
+    imagePath: "/autonexus.png", 
     title: "AutoNexus: Automate. Explore. Model. Explain.",
     description:
       "AutoNexus is a powerful Streamlit web app that automates the entire data pipeline — from uploading raw CSVs to cleaning, exploring, modeling, and explaining results. Users can perform missing value handling, feature scaling, categorical encoding, and visualize EDA insights with real-time plots. It also supports exportable datasets, and model explainability with SHAP, EBM, and LIME. Built for data scientists and analysts who want faster insights without the overhead of manual coding.",
@@ -37,6 +37,27 @@ const jobProjects = [
   },
 
   {
+    imagePath: "/loan.png",
+    title: "FairLend: Interpretable & Fair Loan Default Prediction",
+    description:
+      "Developed a classification pipeline to predict loan defaults using Random Forest with SMOTE for class imbalance. Focused on model transparency by applying SHAP, LIME, and DiCE-ML to explain predictions and generate counterfactuals. Evaluated fairness across protected attributes using AIF360 and Fairlearn, and visualized global feature impacts using ALE and PDP plots. Achieved high recall on minority class while ensuring model interpretability and ethical compliance.",
+    skills: [
+      "Python",
+      "Random Forest",
+      "SMOTE",
+      "SHAP",
+      "LIME",
+      "DiCE-ml",
+      "AIF360",
+      "Fairlearn",
+      "Model Explainability",
+      "Bias & Fairness Evaluation",
+      "Classification Modeling"
+    ],
+    link: "https://github.com/srilekhatv/Loan-Default-Interpretability"
+  },  
+
+  {
     imagePath: "/fd.png",
     title: "FraudSpotter: Can You Tell What’s Real?",
     description:
@@ -56,21 +77,22 @@ const jobProjects = [
 
   {
     imagePath: "/wine.png",
-    title: "WineWise: Can Data Predict What You’ll Sip Next?",
+    title: "WineWise: Forecasting Household Wine Purchases",
     description:
-      "Implemented regression models (Linear, Logistic, Random Forest) to predict wine sales trends. Achieved 5.2% RMSE and identified key sales drivers through correlation analysis, empowering data-driven pricing and inventory planning.",
+      "Developed a regression pipeline to predict 'AmountWines'—the amount spent on wine by customers—using demographic and behavioral data. Conducted data cleaning, feature engineering, and EDA. Trained and tuned Linear Regression, Random Forest, and XGBoost models using RandomizedSearchCV, achieving R² = 0.89 with XGBoost. Applied SHAP for interpretability, highlighting household income and number of adults as key predictors.",
     skills: [
-      "R",
-      "Linear/Logistic/Random Forest",
-      "Regression Analysis",
-      "RMSE",
-      "Correlation Analysis",
-      "Feature Importance",
-      "Forecasting",
-      "Data Cleaning",
-      "Inventory Optimization",
+    "Python",
+    "Pandas",
+    "Scikit-learn",
+    "XGBoost",
+    "SHAP",
+    "Feature Engineering",
+    "Data Cleaning",
+    "Regression Modeling",
+    "R² Score",
+    "RMSE"
     ],
-    link: "",
+    link: "https://github.com/srilekhatv/Wine_Prediction",
   },
 
   {
