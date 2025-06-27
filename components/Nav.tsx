@@ -19,6 +19,7 @@ export default function Nav() {
     "education",
     "experience",
     "projects",
+    "certifications"
   ]);
 
   const navItems: NavItem[] = [
@@ -27,6 +28,7 @@ export default function Nav() {
     { name: "Education", href: "#education" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Certifications", href: "#certifications"}
   ];
 
   const getNavItemClasses = (href: string) => {

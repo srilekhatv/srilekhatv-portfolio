@@ -8,14 +8,24 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MoveUpRight } from "lucide-react";
+import { MoveUpRight, Lock } from "lucide-react";
 
-const jobProjects = [
+interface Project {
+  imagePath: string;
+  title: string;
+  description: string;
+  skills: string[];
+  link: string; 
+  status: 'live' | 'confidential' | 'coming-soon'; // Using all lowercase
+}
+
+
+const jobProjects: Project[] = [
   {
     imagePath: "/autonexus.png", 
     title: "AutoNexus: Automate. Explore. Model. Explain.",
     description:
-      "AutoNexus is a powerful Streamlit web app that automates the entire data pipeline — from uploading raw CSVs to cleaning, exploring, modeling, and explaining results. Users can perform missing value handling, feature scaling, categorical encoding, and visualize EDA insights with real-time plots. It also supports exportable datasets, and model explainability with SHAP, EBM, and LIME. Built for data scientists and analysts who want faster insights without the overhead of manual coding.",
+      "AutoNexus is a full-stack, end-to-end AutoML and Explainable AI (XAI) platform I developed to make data science accessible and transparent. Featuring a secure Firebase authentication system, the app guides users through a professional machine learning workflow, including data preprocessing, automated hyperparameter tuning, and deep model interpretation with SHAP and LIME. To enhance the user experience, the platform features a context-aware AI assistant, powered by Google's Gemini, that provides conversational guidance throughout the data science lifecycle.",
     skills: [
       "Streamlit",
       "Python",
@@ -31,9 +41,13 @@ const jobProjects = [
       "SHAP",
       "LIME",
       "Explainable Boosting Machine",
+      "Google Gemini API",
+      "Firebase"
+
 
     ],
-    link: "https://autonexus.streamlit.app/" // Replace with your actual Streamlit app link
+    link: "https://github.com/srilekhatv/AutoNexus-Showcase",
+    status: "live",
   },
 
   {
@@ -47,6 +61,7 @@ const jobProjects = [
       "SMOTE",
       "SHAP",
       "LIME",
+      "InterpretML",
       "DiCE-ml",
       "AIF360",
       "Fairlearn",
@@ -54,7 +69,8 @@ const jobProjects = [
       "Bias & Fairness Evaluation",
       "Classification Modeling"
     ],
-    link: "https://github.com/srilekhatv/Loan-Default-Interpretability"
+    link: "https://github.com/srilekhatv/Loan-Default-Interpretability",
+    status: "live",
   },  
 
   {
@@ -72,7 +88,8 @@ const jobProjects = [
       "Model Evaluation",
       "Cross-Validation",
     ],
-    link: "https://github.com/srilekhatv/Fraud-Detection-ML", // no link to disable this one
+    link: "https://github.com/srilekhatv/Fraud-Detection-ML", 
+    status: "live",
   },
 
   {
@@ -93,13 +110,14 @@ const jobProjects = [
     "RMSE"
     ],
     link: "https://github.com/srilekhatv/Wine_Prediction",
+    status: "live",
   },
 
   {
     imagePath: "/add.png",
     title: "LegalLens: Real-Time Justice Insights",
     description:
-      "Built an interactive Power BI dashboard using SQL Server data to monitor legal case outcomes, pending workloads, and subscription alerts. Enabled real-time tracking of advocate performance and improved operational decision-making for legal teams.",
+      "Built an interactive Power BI dashboard using data from Microsoft SQL Server to monitor legal case outcomes, advocate performance, pending workloads, and subscription alerts. This enabled real-time performance tracking and improved operational decision-making for legal teams by enhancing overall case management efficiency.",
     skills: [
       "SQL Server",
       "Power BI",
@@ -108,6 +126,8 @@ const jobProjects = [
       "Business Intelligence",
     ],
     link: "",
+    status: "confidential",
+
   },
   {
     imagePath: "/udb.png",
@@ -124,11 +144,38 @@ const jobProjects = [
       "Business Logic Implementation",
     ],
     link: "",
+    status: "coming-soon",
   },
   
 ];
 
 export default function Projects() {
+  const renderProjectBadge = (project: Project) => {
+    // A project with a link is always live
+    if (project.link) {
+      return (
+        <MoveUpRight className="h-5 w-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none" />
+      );
+    }
+    // If no link, check the status
+    switch (project.status) {
+      case 'confidential':
+        return (
+          <span className="flex items-center gap-1.5 text-xs text-red-600 dark:text-red-500 font-semibold">
+            <Lock size={12} />
+            Confidential
+          </span>
+        );
+      case 'coming-soon':
+        return (
+          <span className="text-xs text-yellow-600 dark:text-yellow-500 font-semibold">
+            🚧 Coming Soon
+          </span>
+        );
+      default:
+        return null;
+    }
+  };
   return (
     <section id="projects" className="scroll-mt-16 lg:mt-16 py-3 px-6 max-w-6xl mx-auto text-foreground">
 
@@ -152,14 +199,11 @@ export default function Projects() {
                   className="rounded-xl object-cover max-h-52 w-full border border-muted-foreground"
                 />
               </CardHeader>
+              
               <CardContent className="flex flex-col p-0 w-full lg:w-2/3">
                 <p className="text-primary font-bold text-lg flex items-center gap-2">
                   {project.title}
-                  {project.link ? (
-                    <MoveUpRight className="h-5 w-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none" />
-                  ) : (
-                    <span className="text-xs text-yellow-500 font-semibold">🚧 Coming Soon</span>
-                  )}
+                  {renderProjectBadge(project)}
                 </p>
                 <div className="py-3 text-slate-600 dark:text-muted-foreground text-sm">
                   {project.description}

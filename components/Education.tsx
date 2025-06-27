@@ -11,17 +11,26 @@ export default function Education() {
   const educationDetails = [
     {
       degree: "Master of Science in Information Systems",
-      institution: "University of Texas at Arlington",
+      institution: "The University of Texas at Arlington",
       location: "Texas, USA",
-      timeline: "Aug 2023 – May 2025 (Expected)",
+      timeline: "Aug 2023 – May 2025",
+      gpa: "4.0/4.0",
       description:
-        "Relevant Coursework: Data Mining, Python, Project Management, AI Ethics, Cloud Computing, Data Warehousing, Business Intelligence, and Analysis & Design.",
+        "Relevant Coursework: Data Mining, Python, Project Management, Database Management Systems, AI Ethics, Cloud Computing, Data Warehousing, Business Intelligence, and Analysis & Design.",
+    },
+    {
+      degree: "Graduate Certificate in Business Analytics",
+      institution: "The University of Texas at Arlington",
+      location: "Texas, USA",
+      timeline: "Aug 2023 – May 2025",
+      gpa: "4.0/4.0",
     },
     {
       degree: "Bachelor of Technology in Electronics and Communication Engineering",
-      institution: "SRM University",
+      institution: "SRM Institute of Science and Technology",
       location: "Chennai, India",
       timeline: "Aug 2016 – May 2020",
+      gpa: "3.3/4.0",
     },
   ];
 
@@ -46,6 +55,12 @@ export default function Education() {
                 {edu.institution} • {edu.location}
               </p>
               <p className="text-xs text-muted-foreground mt-1">{edu.timeline}</p>
+
+              {edu.gpa && (
+                <p className="text-xs font-medium text-foreground mt-2">
+                  <strong>GPA:</strong> {edu.gpa}
+                </p>
+              )}
             </div>
 
             {edu.description && (

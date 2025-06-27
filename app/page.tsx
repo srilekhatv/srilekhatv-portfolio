@@ -10,6 +10,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useEffect, useRef } from "react";
 import { Inter } from "next/font/google";
+import Certifications from "@/components/Certifications"
 
 const inter = Inter({ subsets: ["latin"] });
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: false });
@@ -57,6 +58,7 @@ export default function Home() {
             <Education />
             <ExpCard />
             <Projects />
+            <Certifications />
             <Contact />
             <Footer />
           </main>

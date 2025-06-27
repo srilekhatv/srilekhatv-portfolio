@@ -20,6 +20,9 @@ import {
   SiPytorch,
   SiStreamlit,
   SiGithub,
+  SiFirebase,
+  SiFastapi,
+  SiGoogleanalytics,
 } from "react-icons/si";
 
 import { IconType } from "react-icons";
@@ -61,6 +64,7 @@ const skills: { category: string; items: SkillItem[] }[] = [
       { name: "TensorFlow", icon: SiTensorflow },
       { name: "PyTorch", icon: SiPytorch },
       { name: "Streamlit", icon: SiStreamlit },
+      { name: "FastAPI", icon: SiFastapi },
     ],
   },
   {
@@ -68,7 +72,8 @@ const skills: { category: string; items: SkillItem[] }[] = [
     items: [
       { name: "Power BI", icon: LucideBarChart },
       { name: "Tableau", icon: SiTableau },
-      { name: "Excel", icon: Database },
+      { name: "Google Analytics", icon: SiGoogleanalytics },
+      { name: "Excel", icon: Database, },
       { name: "Oracle", icon: SiOracle },
       { name: "ServiceNow", icon: Settings },
       { name: "Git", icon: GitBranch },
@@ -79,6 +84,7 @@ const skills: { category: string; items: SkillItem[] }[] = [
     category: "Platforms",
     items: [
       { name: "AWS", icon: Cloud },
+      { name: "Firebase", icon: SiFirebase },
     ],
   },
 
