@@ -7,6 +7,23 @@ const nextConfig = {
       });
       return config;
     },
+    images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.accredible.com',
+        port: '',
+        pathname: '/v1/frontend/credential_website_embed_image/badge/**',
+      },
+      // ✨ Add this new object for Credly images
+      {
+        protocol: 'https',
+        hostname: 'images.credly.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   };
   
   module.exports = nextConfig;
