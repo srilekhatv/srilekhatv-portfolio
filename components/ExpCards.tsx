@@ -16,9 +16,10 @@ const jobPositions = [
     place: "American Red Cross",
     previousPositions: [""],
     description: [
-      "Streamlined data validation processes across Salesforce and operational databases, improving reporting accuracy and reducing manual audit time by 40% through automated cross-checks and exception tracking.",
-      "Designed and maintained Power BI dashboards to monitor data quality KPIs and flag anomalies, enabling real-time decision-making for regional operations and compliance teams.",
-      "Identified and corrected inconsistencies across donor, volunteer, and disaster response records by implementing rule-based logic in SQL — ensuring higher data integrity for mission-critical reporting and analytics.",
+      "Reviewed and verified data entries across internal systems, maintaining accuracy and consistency for volunteer and donor records.",
+      "Cleaned and maintained databases by applying data validation rules, handling missing/incomplete records, and ensuring adherence to data standards.",
+      "Analyzed data trends to identify anomalies, duplicate entries, and inconsistencies, contributing to improved data quality and process reliability.",
+      "Supported data integrity processes through exception tracking, root cause analysis, and documentation of data correction workflows.",
     ],
     skills: [
       "SQL",
