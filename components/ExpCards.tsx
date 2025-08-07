@@ -11,14 +11,34 @@ import { Badge } from "@/components/ui/badge";
 
 const jobPositions = [
   {
+    timeline: "Jul 2025 - Present",
+    currentPosition: "Data Integrity Analyst",
+    place: "American Red Cross",
+    previousPositions: [""],
+    description: [
+      "Streamlined data validation processes across Salesforce and operational databases, improving reporting accuracy and reducing manual audit time by 40% through automated cross-checks and exception tracking.",
+      "Designed and maintained Power BI dashboards to monitor data quality KPIs and flag anomalies, enabling real-time decision-making for regional operations and compliance teams.",
+      "Identified and corrected inconsistencies across donor, volunteer, and disaster response records by implementing rule-based logic in SQL — ensuring higher data integrity for mission-critical reporting and analytics.",
+    ],
+    skills: [
+      "SQL",
+      "Power BI",
+      "Excel",
+      "Data Integrity",
+      "Data Cleaning",
+      "Data Validation",
+      "Salesforce",
+    ],
+  },
+  {
     timeline: "Jan 2024 — May 2025",
     currentPosition: "Graduate Teaching Assistant",
     place: "The University of Texas at Arlington",
     previousPositions: [""],
     description: [
-      "Led targeted SQL training sessions and data analysis workshops for 100+ graduate students, measurably improving their proficiency in data querying and analysis.  ",
-      "Designed and implemented around 3 hands-on case studies and interactive Tableau dashboards, empowering students to translate complex, real-world datasets into actionable business insights each semester.",
-      "Mentored students on advanced analytical thinking, resulting in a 15% improvement in average scores on data-driven projects and assignments.",
+      "Conducted SQL and Python-based data analytics workshops for 100+ graduate students, focusing on practical querying, data wrangling, and real-world case applications.",
+      "Designed and delivered 3+ end-to-end case studies per semester using industry datasets, guiding students to build interactive Tableau dashboards and derive actionable insights.",
+      "Mentored students on advanced analytical thinking, hypothesis framing, and storytelling with data — leading to a 15% improvement in performance on data-driven assignments and capstone projects.",
     ],
     skills: [
       "SQL",
@@ -55,9 +75,9 @@ const jobPositions = [
   },
   {
     timeline: "Sept 2020 — Aug 2022",
-    currentPosition: "PKI Analyst",
+    currentPosition: "Analyst",
     place: "Wipro Limited",
-    previousPositions: [""],
+    previousPositions: ["Project Engineer"],
     description: [
       "Conducted quantitative root-cause analysis on over 2,000 test cases from 40+ server migrations using Proton. By extracting and analyzing defect data, I identified critical failure trends that informed system improvements and cut issue resolution time by 30%.",
       "Engineered a suite of ServiceNow dashboards to track and analyze IT service delivery, creating automated workflows for certificate requests, 50+ monthly change requests, and multiple escalated incidents. These BI tools provided key insights that streamlined request handling and reduced average response times by 40%.",
