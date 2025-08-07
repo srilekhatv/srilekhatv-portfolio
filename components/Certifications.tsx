@@ -19,6 +19,22 @@ interface Certificate {
 }
 
 const certifications: Certificate[] = [
+   {
+    name: "Data Application Builders Workshop",
+    issuer: "Snowflake",
+    status: "Aug 2025",
+    imagePath: "",
+    credentialUrl: "https://achieve.snowflake.com/545e59d6-4942-4040-adaf-a202e25587e8#acc.ZMrDxFUA",
+    badgeImageUrl: "https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/157489760",
+  },
+  {
+    name: "Collaboration, Marketplace & Cost Estimation Workshop",
+    issuer: "Snowflake",
+    status: "July 2025",
+    imagePath: "",
+    credentialUrl: "https://achieve.snowflake.com/39a5e8c8-2373-493c-ae86-0ed9d6a56230#acc.9IO4KwSC",
+    badgeImageUrl: "https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/154966642",
+  },
   {
     name: "Data Warehousing Workshop",
     issuer: "Snowflake",
@@ -36,14 +52,6 @@ const certifications: Certificate[] = [
     badgeImageUrl: "https://images.credly.com/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png",
     
   }, 
-  {
-    name: "AWS Solutions Architect Associate",
-    issuer: "Amazon Web Services",
-    status: "In Progress",
-    imagePath: "",
-    credentialUrl: "",
-    badgeImageUrl: "",
-  },
 ];
 
 export default function Certifications() {
